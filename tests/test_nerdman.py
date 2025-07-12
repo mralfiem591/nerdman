@@ -3,6 +3,7 @@
 import unittest
 import sys
 import os
+os.environ["NERDMAN_TEST_MODE"] = "1"
 
 # Add the parent directory to the path so we can import nerdman
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
