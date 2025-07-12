@@ -1,3 +1,5 @@
+[![Publish Python package to PyPI](https://github.com/mralfiem591/nerdman/actions/workflows/python-publish.yml/badge.svg)](https://github.com/mralfiem591/nerdman/actions/workflows/python-publish.yml)
+
 # NerdMan 🎨
 
 A powerful Python library and command-line tool for working with Nerd Fonts icons. NerdMan provides easy access to thousands of Nerd Fonts icons with search, filtering, and export capabilities.
