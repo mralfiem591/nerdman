@@ -1,5 +1,5 @@
 # nerdman.py
-# Version V0.1.0
+# Version V0.1.1
 
 import json
 import re
@@ -1092,7 +1092,7 @@ def main():
             return
         elif arg == "version":
             version_info = get_version_info()
-            print("NerdMan Version V0.1.0\n")
+            print("NerdMan Version V0.1.1\n")
             print(f"Nerd Fonts Version: {version_info.get('version', 'unknown')}")
             print(f"Date: {version_info.get('date', 'unknown')}")
             return

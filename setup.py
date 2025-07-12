@@ -17,7 +17,7 @@ def get_version():
                 # Extract the version number
                 version = line.split()[-1].strip('V')
                 return version
-    return '0.1.0'  # Default version
+    return '0.1.1'  # Default version
 
 setup(
     name="nerdman",

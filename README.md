@@ -270,6 +270,28 @@ After installation, NerdMan creates the following directory structure:
 └── nerdfonts_complete.json.backup  # Backup of previous data
 ```
 
+## 🔧 Development
+
+### Setting up for Development
+
+```bash
+git clone https://github.com/yourusername/nerdman.git
+cd nerdman
+pip install -e ".[dev]"
+```
+
+### Running Tests
+
+```bash
+python -m pytest tests/
+```
+
+### Building Documentation
+
+```bash
+python -m sphinx docs/ docs/_build/
+```
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
