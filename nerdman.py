@@ -17,7 +17,7 @@ CONFIG = configparser.ConfigParser()
 
 if not os.path.exists(Path.home() / "nerdman" / "config.ini"):
     with open(Path.home() / "nerdman" / "config.ini", 'w') as f:
-        f.write("[updates]\nupdate_mode = notify\n")
+        f.write("[updates]\nupdate_mode = auto\n")
         
 CONFIG.read(Path.home() / "nerdman" / "config.ini")
 
@@ -27,7 +27,7 @@ DEFAULT_NERDFONTS_URL = "https://raw.githubusercontent.com/ryanoasis/nerd-fonts/
 UPDATE_MODE = CONFIG.get("updates", "update_mode", fallback=None)
 
 if UPDATE_MODE is None or UPDATE_MODE not in ["auto", "notify", "manual"]:
-    print("⚠️  No/invalid update mode configured. Defaulting to 'notify'.")
+    print("⚠️  No/invalid update mode configured. Defaulting to 'auto'.")
     UPDATE_MODE = "notify"
 
 def update(required: bool = False, manual: bool = False) -> bool:
