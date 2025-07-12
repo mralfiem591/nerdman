@@ -13,34 +13,31 @@ def get_version():
     """Extract version from nerdman.py without importing it."""
     with open('nerdman.py', 'r', encoding='utf-8') as f:
         for line in f:
-            if line.startswith('# Version:') or 'Version V' in line:
-                # Extract version from comment or string
-                if 'V0.1.0' in line:
-                    return '0.1.0'
+            if 'Version V' in line:
+                # Extract the version number
+                version = line.split()[-1].strip('V')
+                return version
     return '0.1.0'  # Default version
 
 setup(
     name="nerdman",
     version=get_version(),
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Alfie McCabe",
+    author_email="iamamccabe@gmail.com",
     description="A powerful Python library and CLI tool for working with Nerd Fonts icons",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/nerdman",
+    url="https://github.com/mralfiem591/nerdman",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/nerdman/issues",
-        "Source": "https://github.com/yourusername/nerdman",
-        "Documentation": "https://github.com/yourusername/nerdman#readme",
+        "Bug Reports": "https://github.com/mralfiem591/nerdman/issues",
+        "Source": "https://github.com/mralfiem591/nerdman",
+        "Documentation": "https://github.com/mralfiem591/nerdman#readme",
     },
     py_modules=["nerdman"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "Topic :: System :: Fonts",
-        "Topic :: Text Processing",
-        "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",

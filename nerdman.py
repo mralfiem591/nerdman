@@ -1,4 +1,5 @@
-# nerd_icons.py
+# nerdman.py
+# Version V0.1.0
 
 import json
 import re
@@ -28,7 +29,7 @@ UPDATE_MODE = CONFIG.get("updates", "update_mode", fallback=None)
 
 if UPDATE_MODE is None or UPDATE_MODE not in ["auto", "notify", "manual"]:
     print("⚠️  No/invalid update mode configured. Defaulting to 'auto'.")
-    UPDATE_MODE = "notify"
+    UPDATE_MODE = "auto"
 
 def update(required: bool = False, manual: bool = False) -> bool:
     """Update Nerd Fonts data based on the configured update mode."""
