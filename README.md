@@ -27,7 +27,7 @@ pip install nerdman
 ### From Source
 
 ```bash
-git clone https://github.com/yourusername/nerdman.git
+git clone https://github.com/mralfiem591/nerdman.git
 cd nerdman
 pip install -e .
 ```
@@ -316,7 +316,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🐛 Issue Reporting
 
-If you encounter any issues or have feature requests, please [open an issue](https://github.com/yourusername/nerdman/issues) on GitHub.
+If you encounter any issues or have feature requests, please [open an issue](https://github.com/mralfiem591/nerdman/issues) on GitHub.
 
 ## 📊 Statistics
 
