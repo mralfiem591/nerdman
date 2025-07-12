@@ -16,25 +16,8 @@ os.makedirs(Path.home() / "nerdman", exist_ok=True)
 CONFIG = configparser.ConfigParser()
 
 if not os.path.exists(Path.home() / "nerdman" / "config.ini"):
-    # Create default config if it doesn't exist
-    # Check if we're in test mode to avoid interactive prompts during testing
-    if os.environ.get('NERDMAN_TEST_MODE'):
-        # In test mode, create default config automatically
-        os.makedirs(Path.home() / "nerdman", exist_ok=True)
-        with open(Path.home() / "nerdman" / "config.ini", 'w') as f:
-            f.write("[updates]\nupdate_mode = notify\n")
-    else:
-        try:
-            if input("config.ini is missing! Create default config? (y/N): ").strip().lower() == 'y':
-                os.makedirs(Path.home() / "nerdman", exist_ok=True)
-                with open(Path.home() / "nerdman" / "config.ini", 'w') as f:
-                    f.write("[updates]\nupdate_mode = notify\n")
-        except (EOFError, KeyboardInterrupt):
-            # Handle cases where input() might not work (e.g., non-interactive environments)
-            print("Creating default config...")
-            os.makedirs(Path.home() / "nerdman", exist_ok=True)
-            with open(Path.home() / "nerdman" / "config.ini", 'w') as f:
-                f.write("[updates]\nupdate_mode = notify\n")
+    with open(Path.home() / "nerdman" / "config.ini", 'w') as f:
+        f.write("[updates]\nupdate_mode = notify\n")
         
 CONFIG.read(Path.home() / "nerdman" / "config.ini")
 
